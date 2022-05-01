@@ -5,7 +5,7 @@
 
 *[What](#what)
 
-#[Screenshot](#screenshot)
+*[Screenshot](#screenshot)
 
 *[What I Learned](#what-i-learned)
 
@@ -20,11 +20,11 @@ This is a simple coding quiz, created mostly in javascript. An initial greeting 
 
 ## Screenshot
 
-![screen shot of website 1]
+![screen shot of website 1](./assets/images/ss1.png)
 
-![screen shot of website 2]
+![screen shot of website 2](./assets/images/ss2.png)
 
-![screen shot of website 3]
+![screen shot of website 3](./assets/images/ss3.png)
 
 ## What I Learned
 
@@ -34,4 +34,4 @@ I also got a lot of expierience utilizing objects and arrays.
 
 ## Links
 
-
+https://bmkersey.github.io/Code-Quiz/
