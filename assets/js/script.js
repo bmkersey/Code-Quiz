@@ -8,6 +8,10 @@ var answer4Btn= document.querySelector(".answer3")
 
 var timer = document.querySelector("#timer")
 
+var playerObj = {
+    name:"",
+    score:"" 
+}
 var highScore = 0
 var questionNumber = 0
 var timeRemaining = 60
@@ -41,10 +45,14 @@ var deleteContent = function(){
 
 var saveData = function(){
     debugger;
-    highScore = timeRemaining
-    localStorage.setItem("highscore", JSON.stringify(highScore));
-    var initialInput = intials.value
-    localStorage.setItem("initials", initialInput)
+    playerObj.score = timeRemaining
+    playerObj.name = initials.value
+    localStorage.setItem("player", JSON.stringify(playerObj));
+    location.href = "./highscore.html"
+    var newScore = document.createElement("li")
+    newScore.id = "player-score"
+    newScore.textContent = playerObj.name + " - " + playerObj.score
+    
 }
 
 var endGame = function(){
@@ -59,7 +67,7 @@ var endGame = function(){
     highScoreMessageEl.className = "end-game-p";
     highScoreMessageEl.innerHTML = "Enter you initials:"
     var initialEl = document.createElement("input");
-    initialEl.id = "intials"
+    initialEl.id = "initials"
     var submitButtonEl = document.createElement("button");
     submitButtonEl.id = "high-score"
     submitButtonEl.textContent = "Submit"
