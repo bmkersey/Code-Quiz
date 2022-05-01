@@ -1,3 +1,47 @@
+#code-box{
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    text-align: center;
+    margin-left: 400px;
+}
+
+
+
+#timer{
+    position: absolute;
+    top: 10px;
+    right: 15px
+    
+
+}
+
+#high-score-list{
+    width: 100px;
+    padding-left: 0;
+    
+}
+
+
+
 .answer-list{
-    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.button{
+    width: 100px;
+    margin: 10px 0 10px 100px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color:white;
+}
+
+
+.button2{
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
 }

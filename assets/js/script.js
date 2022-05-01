@@ -5,6 +5,7 @@ var answer1Btn = document.querySelector(".answer0")
 var answer2Btn = document.querySelector(".answer1")
 var answer3Btn= document.querySelector(".answer2")
 var answer4Btn= document.querySelector(".answer3")
+var answerSec = document.querySelector(".answer")
 
 var timer = document.querySelector("#timer")
 
@@ -72,6 +73,7 @@ var endGame = function(){
     submitButtonEl.id = "high-score"
     submitButtonEl.textContent = "Submit"
     submitButtonEl.type = "submit";
+    submitButtonEl.className = "button2"
     mainPage.appendChild(endGameEl);
     endGameEl.appendChild(congrats);
     endGameEl.appendChild(highScoreMessageEl)
@@ -99,13 +101,13 @@ var checkAnswer = function(event){
         selectedAnswer.appendChild(answerStatus);
         
 
-        timeRemaining = timeRemaining -5;
+        timeRemaining = timeRemaining -10;
         questionNumber++;
 
         
-        deleteContent();
+        setTimeout(deleteContent, 1100)
 
-        callQuestion();
+        setTimeout(callQuestion, 1200);
         return;
 
     } else {
@@ -114,11 +116,12 @@ var checkAnswer = function(event){
         answerStatus.textContent = "Correct!!";
         var selectedAnswer = document.querySelector(".answer-list");
         selectedAnswer.appendChild(answerStatus);
+        
         questionNumber++;
         
-        deleteContent();
+        setTimeout(deleteContent, 1100)
 
-        callQuestion();
+        setTimeout(callQuestion, 1200);
 
     }
 }
@@ -161,7 +164,7 @@ var callQuestion = function() {
     answer4Btn.addEventListener("click", checkAnswer);
 
 
-    // assignCorrect();
+    
    
 
 };
@@ -183,7 +186,7 @@ var startQuiz = function(){
         if (timeRemaining <= 0){
             clearInterval(myInterval);
             
-            
+            deleteContent();
             endGame();
             
             
