@@ -1,3 +1,5 @@
+//all variables that need to be set gloabally
+
 var codeBox = document.querySelector("#code-box")
 var startButton = document.querySelector("#start-quiz")
 var mainPage = document.querySelector("#main")
@@ -36,6 +38,10 @@ var correctAnswerArr= [correctAnswer0,correctAnswer1,correctAnswer2,correctAnswe
 var answerArr = [questionOneAnswers, questionTwoAnswers, questionThreeAnswers, questionFourAnswers, questionFiveAnswers]
 
 
+//function declaration begin
+
+
+//clears code box element
 var deleteContent = function(){
     var codeBox = document.querySelector("#code-box")
     console.log("hello");
@@ -43,7 +49,7 @@ var deleteContent = function(){
 };
 
 
-
+//saves high score and player name to local storage
 var saveData = function(){
     debugger;
     playerObj.score = timeRemaining
@@ -56,6 +62,8 @@ var saveData = function(){
     
 }
 
+
+//end game function that allows high score to be inout with name
 var endGame = function(){
   
     
@@ -84,7 +92,7 @@ var endGame = function(){
     
     
 }
-
+//function that checks which button was pressed and checks vailidity, displays correct/incorrect
 var checkAnswer = function(event){
 
 
@@ -126,7 +134,7 @@ var checkAnswer = function(event){
     }
 }
 
-
+//calls questions from arrays and sets up answers and correct answers
 var callQuestion = function() {
 
    if (questionNumber > 4) {
@@ -169,7 +177,7 @@ var callQuestion = function() {
 
 };
 
-
+//how the quiz is started. enables timer
 var startQuiz = function(){
 
     
@@ -213,15 +221,9 @@ var startQuiz = function(){
 }
 
 
+// functions end
 
-
-
-
-
-
-
-
-
+//intial listener
 
 startButton.addEventListener("click", startQuiz);
 
